@@ -4,8 +4,10 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import Box from "./box/box";
 
-function Home() {
+
+function Home({ isConnected, ConnectButton}) {
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -31,12 +33,11 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
+              <Box>
+              ConnectButton=
+                  {ConnectButton}
+                  isConnected={isConnected}
+              </Box>
             </Col>
           </Row>
         </Container>

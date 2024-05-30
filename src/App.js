@@ -10,14 +10,18 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Web3Provider } from "./assets/components/connectKit/connect-kit.jsx";
+import { ConnectKitButton } from "./components/connect-kit.jsx";
+import { ConnectButton } from "./components/connect-button.jsx";
 
 function App() {
+  const [isConnected, setIsconnected] = useState(false);
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
@@ -29,21 +33,32 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <Web3Provider>
+      <Router>
+        <Preloader load={load} />
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <Navbar />
+          <ScrollToTop />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home>
+                  ConnectButton=
+                  {<ConnectButton>{setIsconnected}</ConnectButton>}
+                  isConnected={isConnected}
+                </Home>
+              }
+            />
+            <Route path="/project" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </Web3Provider>
   );
 }
 

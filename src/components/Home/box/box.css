@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus {
+  border-color: none; /* Change to your desired border color */
+  outline: none; /* Removes the default outline */
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(8, 9, 58, 0.7), rgba(8, 9, 58, 0.7)),
+    url("../../../Assets/photo1714546066.jpeg");
+  background-size: 80%;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+  background: linear-gradient(
+    90deg,
+    rgba(112, 88, 199, 0.9),
+    rgba(11, 0, 82, 0.9)
+  );
+  border-radius: 25px;
+}
+
+.description {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BUY-NOW-BEFOR-PRICE-RISE {
+  margin-top: 30px;
+  font-family: Roboto;
+  font-weight: 900;
+}
+
+.price {
+  margin-top: 20px;
+  font-family: Roboto;
+  font-weight: 900;
+}
+
+.countdown {
+  width: 80%;
+  height: 30%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex: 1fr, 1fr, 1fr, 1fr;
+  flex-direction: row;
+}
+
+.countdown div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(11, 0, 82, 0.7);
+  border-radius: 8px;
+  margin-left: 1px;
+}
+.countdown div p {
+  padding-bottom: 5px;
+  font-family: "Josefin Sans";
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.countdown div div {
+  background-color: rgba(11, 0, 82, 0);
+  padding-bottom: 5px;
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 27px;
+}
+.usdt-raised {
+  font-family: Roboto;
+  font-weight: 900;
+}
+
+.buttons {
+  width: 100%;
+  height: 100%;
+}
+
+.payment-way {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.eth img {
+  width: 30px;
+  margin-right: 12px;
+}
+
+.usdt img {
+  width: 28px;
+  margin-right: 12px;
+}
+
+.input {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.pay img {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 30px;
+}
+
+.eth-you-pay {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 100;
+  opacity: 0.7;
+  word-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.eth-input {
+  height: 70%;
+  width: 80%;
+  background: none;
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: white;
+  padding-left: 15px;
+  font-size: 15px;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.receive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.receive-input {
+  height: 70%;
+  width: 80%;
+  background: none;
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: white;
+  padding-left: 15px;
+  font-size: 15px;
+  color: rgb(255, 255, 255, 0.7);
+  background-image: url(../../../Assets/photo1714546066-modified.png);
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: 27px; /* Adjust size as needed */
+}
+
+.you-receive {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 100;
+  opacity: 0.7;
+  word-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.pay-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect-wallet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect-wallet-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gift-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 90%;
+}
+
+.gift-code {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 100;
+  opacity: 0.7;
+  word-spacing: 3px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.check-mark {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(37, 26, 102, 0.9);
+  border-radius: 4px;
+  margin-left: 5px;
+  margin-top: 9px;
+  cursor: pointer;
+  outline: none;
+}
+
+.buy {
+  background: linear-gradient(
+    90deg,
+    rgba(120, 90, 239, 0.9),
+    rgba(24, 0, 177, 0.9)
+  );
+  border: none;
+  border-radius: 100px;
+  width: 50%;
+  height: 50px;
+  margin-top: 15px;
+  color: white;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.buy:hover {
+  color: black;
+}
+
+.gift-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift-bonus {
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.764);
+}
+
+.gift-input {
+  height: 40px;
+  width: 100%;
+  display: block;
+  background: none;
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: white;
+  padding-left: 15px;
+  font-size: 18px;
+  color: rgb(255, 255, 255, 0.7);
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: 27px; /* Adjust size as needed */
+}
