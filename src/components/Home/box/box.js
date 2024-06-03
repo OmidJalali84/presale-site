@@ -127,20 +127,20 @@ const Box = ({ isConnected, ConnectButton }) => {
       const USDTContract = new web3.eth.Contract(usdtAbi, usdtAddress);
 
       let indexGiftcode = 0;
-      giftcode == "FSH-BINGX"
-        ? (indexGiftcode = 1)
-        : giftcode == "FSH-BITCOIN"
-        ? (indexGiftcode = 2)
-        : payway === "eth"
-        ? await contract.methods
-            .buyTokensWithEther(indexGiftcode)
-            .send({ from: accounts[0], value: BigInt(ethValue * 1e18) })
-        : (await USDTContract.methods
-            .approve(address, ethValue * 1e18)
-            .send({ from: accounts[0] }),
+      if (giftcode == "FSH-BINGX") indexGiftcode = 1;
+      else if (giftcode == "FSH-BITCOIN") indexGiftcode = 2;
+      if (payway === "eth") {
+        await contract.methods
+          .buyTokensWithEther(indexGiftcode)
+          .send({ from: accounts[0], value: ethValue * 1e18 });
+      } else {
+        await USDTContract.methods
+          .approve(address, ethValue * 1e18)
+          .send({ from: accounts[0] })
           await contract.methods
             .buyTokensWithUSDT(ethValue * 500, indexGiftcode)
-            .send({ from: accounts[0] }));
+            .send({ from: accounts[0] });
+      }
     } catch (e) {
       console.error("Execute Contract: ", e);
     }

@@ -16,7 +16,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Web3Provider } from "./assets/components/connectKit/connect-kit.jsx";
+import { Web3Provider } from "./components/connect-kit.jsx";
 import { ConnectKitButton } from "./components/connect-kit.jsx";
 import { ConnectButton } from "./components/connect-button.jsx";
 

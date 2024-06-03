@@ -6,8 +6,7 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import Box from "./box/box";
 
-
-function Home({ isConnected, ConnectButton}) {
+function Home({ isConnected, ConnectButton }) {
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -34,9 +33,9 @@ function Home({ isConnected, ConnectButton}) {
 
             <Col md={5} style={{ paddingBottom: 20 }}>
               <Box>
-              ConnectButton=
-                  {ConnectButton}
-                  isConnected={isConnected}
+                ConnectButton=
+                {ConnectButton}
+                isConnected={isConnected}
               </Box>
             </Col>
           </Row>
