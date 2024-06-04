@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./box.css";
-import eth from "../../../Assets/ETH.svg";
+import eth from "../../../Assets/binance.png";
 import usdt from "../../../Assets/usdt.svg";
 import { abi, address } from "../../../contract";
 import {

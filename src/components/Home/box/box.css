@@ -12,29 +12,12 @@ input:focus {
   outline: none; /* Removes the default outline */
 }
 
-.hero {
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(rgba(8, 9, 58, 0.7), rgba(8, 9, 58, 0.7)),
-    url("../../../Assets/photo1714546066.jpeg");
-  background-size: 80%;
-  background-position: center;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-}
-
 .box {
   display: flex;
   flex-direction: column;
   width: 400px;
   height: 600px;
-  background: linear-gradient(
-    90deg,
-    rgba(112, 88, 199, 0.9),
-    rgba(11, 0, 82, 0.9)
-  );
+  background: linear-gradient(90deg, #350d65, #06042f);
   border-radius: 25px;
 }
 
@@ -74,15 +57,17 @@ input:focus {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgba(11, 0, 82, 0.7);
+  background-color: #280553;
   border-radius: 8px;
   margin-left: 1px;
 }
 .countdown div p {
-  padding-bottom: 5px;
+  margin-bottom: 0px;
+  justify-content: center;
+  align-items: center;
   font-family: "Josefin Sans";
   font-weight: 600;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .countdown div div {
@@ -121,7 +106,7 @@ input:focus {
 }
 
 .input {
-  height: 70px;
+  height: 80px;
   display: flex;
   justify-content: space-around;
 }
@@ -136,7 +121,7 @@ input:focus {
 .pay img {
   position: absolute;
   right: 30px;
-  top: 30px;
+  top: 37px;
   width: 30px;
 }
 
@@ -245,11 +230,7 @@ input:focus {
 }
 
 .buy {
-  background: linear-gradient(
-    90deg,
-    rgba(120, 90, 239, 0.9),
-    rgba(24, 0, 177, 0.9)
-  );
+  background: #220749;
   border: none;
   border-radius: 100px;
   width: 50%;
@@ -261,6 +242,7 @@ input:focus {
   font-size: 14px;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
+  
 }
 
 .buy:hover {

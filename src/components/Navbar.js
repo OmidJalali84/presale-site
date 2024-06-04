@@ -16,7 +16,7 @@ import {
 
 import { CgFileDocument } from "react-icons/cg";
 
-function NavBar() {
+function NavBar({ ConnectKitButton }) {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -39,7 +39,12 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          <i>
+            <b className="purple" style={{ fontSize: "30px" }}>
+              {" "}
+              Fisho{" "}
+            </b>
+          </i>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -60,11 +65,7 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
-              >
+              <Nav.Link as={Link} onClick={() => updateExpanded(false)}>
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
             </Nav.Item>
@@ -88,32 +89,23 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <ImBlog style={{ marginBottom: "2px" }} /> Tutorial
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
+                href="https://bscscan.com/address/0x55d4598a58abdd97ac1871b33508b2b0980d6bc8?__cf_chl_rt_tk=zzAjJJ8mlEfg_ucfJqlMEaKkyxE0PHWWFanZKgbT5IY-1717430358-0.0.1.1-7188#writeContract"
                 target="_blank"
                 rel="noreferrer"
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Smart
+                Contract
               </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/soumyajit4419/Portfolio"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
+        {ConnectKitButton}
       </Container>
     </Navbar>
   );

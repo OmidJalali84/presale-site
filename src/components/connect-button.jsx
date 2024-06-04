@@ -2,11 +2,7 @@ import { ConnectKitButton } from "connectkit";
 
 import styled from "styled-components";
 const StyledButton = styled.button`
-  background: linear-gradient(
-    90deg,
-    rgba(120, 90, 239, 0.9),
-    rgba(24, 0, 177, 0.9)
-  );
+  background: #220749;
   display: flex;
   justify-content: center;
   align-items: center;

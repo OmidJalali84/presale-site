@@ -17,7 +17,7 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Web3Provider } from "./components/connect-kit.jsx";
-import { ConnectKitButton } from "./components/connect-kit.jsx";
+import { ConnectKitButton } from "connectkit";
 import { ConnectButton } from "./components/connect-button.jsx";
 
 function App() {
@@ -37,17 +37,18 @@ function App() {
       <Router>
         <Preloader load={load} />
         <div className="App" id={load ? "no-scroll" : "scroll"}>
-          <Navbar />
+          <Navbar ConnectKitButton={<ConnectKitButton />} />
           <ScrollToTop />
           <Routes>
             <Route
               path="/"
               element={
-                <Home>
-                  ConnectButton=
-                  {<ConnectButton>{setIsconnected}</ConnectButton>}
+                <Home
+                  ConnectButton={
+                    <ConnectButton>{setIsconnected}</ConnectButton>
+                  }
                   isConnected={isConnected}
-                </Home>
+                />
               }
             />
             <Route path="/project" element={<Projects />} />
