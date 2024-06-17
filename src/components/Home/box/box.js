@@ -18,7 +18,7 @@ const Box = ({ isConnected, ConnectButton }) => {
   const [payway, setPayway] = useState("eth");
   const [isChecked, setIsChecked] = useState(false);
   let giftcode;
-  const [targetDate, setTargetDate] = useState("2024-06-20T23:59");
+  const [targetDate, setTargetDate] = useState("2024-07-17T08:32");
   const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,
@@ -136,10 +136,10 @@ const Box = ({ isConnected, ConnectButton }) => {
       } else {
         await USDTContract.methods
           .approve(address, ethValue * 1e18)
-          .send({ from: accounts[0] })
-          await contract.methods
-            .buyTokensWithUSDT(ethValue * 500, indexGiftcode)
-            .send({ from: accounts[0] });
+          .send({ from: accounts[0] });
+        await contract.methods
+          .buyTokensWithUSDT(ethValue * 500, indexGiftcode)
+          .send({ from: accounts[0] });
       }
     } catch (e) {
       console.error("Execute Contract: ", e);

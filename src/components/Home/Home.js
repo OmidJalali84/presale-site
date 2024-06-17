@@ -30,7 +30,9 @@ function Home({ isConnected, ConnectButton }) {
                 <div style={{ padding: 50, textAlign: "left" }}>
                   <Type />
                 </div>
-                <button className="smart-contract">Smart Contract</button>
+                <a target="_blank" href="https://bscscan.com/address/0x495410c2a3eb2b35fe1a0de137c87aed72f6384f">
+                  <button className="smart-contract">Smart Contract</button>
+                </a>
               </Col>
               <Col md={5} style={{ paddingBottom: 20 }}>
                 <Box ConnectButton={ConnectButton} isConnected={isConnected} />

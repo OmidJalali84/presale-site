@@ -95,7 +95,7 @@ function NavBar({ ConnectKitButton }) {
 
             <Nav.Item>
               <Nav.Link
-                href="https://bscscan.com/address/0x55d4598a58abdd97ac1871b33508b2b0980d6bc8?__cf_chl_rt_tk=zzAjJJ8mlEfg_ucfJqlMEaKkyxE0PHWWFanZKgbT5IY-1717430358-0.0.1.1-7188#writeContract"
+                href="https://bscscan.com/address/0x495410c2a3eb2b35fe1a0de137c87aed72f6384f"
                 target="_blank"
                 rel="noreferrer"
               >
